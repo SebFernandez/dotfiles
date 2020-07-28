@@ -1,4 +1,4 @@
 #!/bin/bash
 
-FREE_MEM=`free -h | awk '/^Mem:/ {print $3 " / " $2}'`
-echo "$FREE_MEM  "
+mem=$(free -h | awk '/^Mem:/ {print $3}' | cut -c1-3 | awk '{print ($1 * 100) / 7,7}' | awk '{print int($1)}')
+echo "${mem}% "

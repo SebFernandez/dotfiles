@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-echo "♫ $(playerctl metadata artist) - $(playerctl metadata title)"
+echo "♫ $(playerctl --player=spotify metadata artist) - $(playerctl --player=spotify metadata title)"
