@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gpu=$(nvidia-smi | sed -n 9p | awk '{print $13}')
+gpu=$(nvidia-smi | sed -n 10p | awk '{print $13}')
 echo "$gpu "
